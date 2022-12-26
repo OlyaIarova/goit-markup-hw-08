@@ -1,0 +1,223 @@
+.footer {
+  text-align: center;
+  padding-top: 60px;
+  padding-bottom: 60px;
+  background: $colorBackground-footer;
+
+  @include desktop {
+    display: flex;
+    justify-content: center;
+    align-content: normal;
+    text-align: start;
+    margin: 0pt;
+  }
+}
+.footer__container {
+  @include desktop {
+    display: flex;
+  }
+}
+.footer__box {
+  @include desktop {
+    margin-right: 70px;
+  }
+}
+
+.footer__tablet {
+  @include tablet {
+    display: flex;
+  }
+  @include desktop {
+    margin: 0px;
+    padding: 0px;
+  }
+}
+
+.logo-label__footer {
+  @include tablet {
+    padding-left: 90px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    @include desktop {
+      display: flex;
+      padding-left: 0px;
+    }
+  }
+}
+.footer__address {
+  display: flex;
+  flex-direction: column;
+  color: $colorPrimary-white;
+  font-style: normal;
+  @include font(400, 14, 24, 0.03);
+  transition: color $duration $timingFunction;
+
+  &:hover,
+  &:focus {
+    color: $colorAccent;
+  }
+}
+
+.footer__text {
+  margin-bottom: 8px;
+  display: flex;
+  flex-direction: column;
+}
+
+.footer__contact {
+  color: $colorPrimary-footer;
+  @include font(400, 14, 24, 0.03);
+
+  &:hover,
+  &:focus {
+    color: $colorAccent;
+  }
+}
+
+.footer__social {
+  display: flex;
+  flex-direction: column;
+  padding-top: 60px;
+
+  @include tablet {
+    padding-top: 65px;
+  }
+  @include desktop {
+    display: flex;
+    flex-direction: column;
+    padding-top: 72px;
+    width: 206px;
+    padding-left: 0px;
+    padding-right: 0px;
+    margin: 0px 93px 0px 0px;
+  }
+}
+
+.footer__title {
+  margin: 0px 0px 20px;
+  color: $colorPrimary-white;
+  @include font(700, 14, 16, 0.03);
+  @include desktop {
+    text-align: start;
+  }
+}
+
+.footer__form {
+  @include desktop {
+    display: flex;
+    flex-direction: column;
+    max-width: 570px;
+    margin: 0px;
+  }
+}
+
+.footer__subtitle {
+  @extend %flex-align;
+  justify-content: center;
+}
+
+.footer__item {
+  width: 44px;
+  height: 44px;
+  margin-right: 10px;
+}
+
+.footer__link {
+  width: 100%;
+  height: 100%;
+  @extend %flex-align;
+  justify-content: center;
+  margin-right: 10px;
+  border-radius: 50%;
+  fill: $colorPrimary-white;
+  background: $colorBackground-icon;
+  transition: color $duration $timingFunction,
+    background-color $duration $timingFunction;
+
+  &:nth-child(4) {
+    margin-right: 0px;
+  }
+  &:hover,
+  &:focus {
+    background-color: $colorAccent;
+  }
+}
+
+.footer__form {
+  padding-top: 60px;
+  margin: 0px auto;
+
+  @include desktop {
+    min-width: 570px;
+    padding-top: 72px;
+    padding-bottom: 94px;
+    padding-left: 0px;
+    margin: 0px auto 0px 0px;
+  }
+}
+.submit-form {
+  justify-content: center;
+
+  @include desktop {
+    display: flex;
+  }
+}
+
+.submit-form__field {
+  display: flex;
+  max-width: 450px;
+  width: 100%;
+  padding: 15px 16px;
+  margin: 0px auto;
+
+  background-color: $colorBackground-footer;
+  border: 1px solid $colorFooter-input;
+  filter: drop-shadow$shadowButton-submit;
+  border-radius: 4px;
+  @include font(400, 14, 20, 0.03);
+  @extend %flex-align;
+
+  color: $colorPrimary-footer;
+  cursor: pointer;
+  transition: border $duration $timingFunction;
+  &:hover,
+  &:focus {
+    border: 1px solid $colorAccent;
+  }
+  @include desktop {
+    justify-content: center;
+    align-items: center;
+    width: 358px;
+    height: 50px;
+    margin-right: 12px;
+  }
+}
+
+.submit-form__button {
+  @extend %flex-align;
+  justify-content: center;
+  width: 200px;
+  margin: 20px auto 0px auto;
+  padding: 10px 28px;
+  @include font(700, 16, 30, 0.03);
+
+  color: $colorPrimary-white-btn;
+  background-color: $colorAccent;
+  box-shadow: $shadowButton-submit;
+  border-radius: 4px;
+  border: 1px solid transparent;
+  @include desktop {
+    justify-content: center;
+    align-items: center;
+    width: 358px;
+    margin: 0px auto;
+  }
+}
+
+.submit-form__icon {
+  margin-left: 10px;
+  fill: currentColor;
+  fill: $colorLogo-white;
+}

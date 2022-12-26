@@ -1,0 +1,64 @@
+.hero {
+  display: flex;
+  padding-top: 118px;
+  padding-bottom: 118px;
+
+  background-color: $colorBackground-footer;
+  text-align: center;
+  flex-basis: 100%;
+  max-width: 1600px;
+  // height: 600px;
+  // margin-left: auto;
+  // margin-right: auto;
+  outline: 1px solid $colorBackground-footer;
+  background-image: linear-gradient(to right, $colorGradient, $colorGradient),
+    url(../images/fon-tel.jpg);
+
+    @include retina{
+      background-image: linear-gradient(to right, $colorGradient, $colorGradient),
+    url(../images/fon-tel-2x.jpg);
+    }
+
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+
+  @include tablet {
+    outline: 1px solid $colorBackground-footer;
+    background-image: linear-gradient(to right, $colorGradient, $colorGradient),
+      url(../images/fon-tablet.jpg);
+      @include retina{
+        background-image: linear-gradient(to right, $colorGradient, $colorGradient),
+      url(../images/fon-tablet-2x.jpg);
+      }
+   }
+  
+   @include desktop {
+    outline: 1px solid $colorBackground-footer;
+    background-image: linear-gradient(to right, $colorGradient, $colorGradient),
+      url(../images/fon.jpg);
+      @include retina{
+        background-image: linear-gradient(to right, $colorGradient, $colorGradient),
+      url(../images/fon-2x.jpg);
+      }
+   }
+}
+
+.hero__title {
+  display: flex;
+  max-width: 360px;
+  // flex-basis: 100%;
+  margin: 0 auto;
+  margin-bottom: $marginPrimary;
+  color: $colorPrimary-white;
+  @include font(900, 26, 42, 0.06);
+
+  text-align: center;
+
+  
+    
+@include desktop {
+  @include font(900, 44, 60, 0.06);
+  max-width: 696px;
+ }
+}

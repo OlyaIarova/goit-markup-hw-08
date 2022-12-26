@@ -1,0 +1,51 @@
+%flex-align {
+  display: flex;
+  align-items: center;
+}
+@mixin font($fw: 400, $fs: 14, $lh: 16, $ls: 0.03) {
+  font-weight: $fw;
+  font-size: $fs + px;
+  line-height: $lh / $fs;
+  letter-spacing: $ls + em;
+}
+%title {
+  color: $colorPrimary-text;
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 42px;
+  text-align: center;
+  letter-spacing: 0.03em;
+}
+
+@mixin tel {
+  @media screen and (min-width: 480px) {
+    @content;
+  }
+}
+@mixin tel-max {
+  @media screen and (max-width: 767px) {
+    @content;
+  }
+}
+@mixin tablet {
+  @media screen and (min-width: 768px) {
+    @content;
+  }
+}
+@mixin desktop {
+  @media screen and (min-width: 1200px) {
+    @content;
+  }
+}
+@mixin tablet-max {
+  @media screen and (max-width: 1199px) {
+    @content;
+  }
+}
+@mixin retina {
+  @media (min-device-pixel-ratio: 2),
+    (min-resolution: 192dpi),
+    (min-resolution: 2dppx) {
+    @content;
+  }
+}

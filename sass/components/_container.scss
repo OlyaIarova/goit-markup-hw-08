@@ -1,0 +1,35 @@
+.container {
+  // width: 1200px;
+  width: 100%;
+  margin: 0px auto;
+  padding: 0px 15px;
+
+  @include tel {
+    width: 480px;
+  }
+
+  @include tablet {
+    width: 768px;
+  }
+
+  @include desktop {
+    width: 1200px;
+  }
+}
+.section {
+  padding-top: 60px;
+  padding-bottom: 60px;
+}
+@include desktop {
+  .section {
+    padding-bottom: 94px;
+    padding-top: 94px;
+  }
+  .section:nth-child(3) {
+    padding-top: 0px;
+  }
+}
+
+.portfolio__button-set {
+  margin-bottom: 50px;
+}

@@ -1,0 +1,36 @@
+.logo-label {
+  display: block;
+  padding-bottom: 16px;
+  padding-top: 16px;
+
+  font-family: "Raleway", cursive;
+  color: $colorAccent;
+  @include font(700, 24, 28, 0.03);
+
+  @include tablet {
+    margin-right: 87px;
+    padding-bottom: 26px;
+    padding-top: 26px;
+  }
+
+  @include desktop {
+    margin-right: 92px;
+    padding-bottom: 16px;
+    padding-top: 24px;
+    @include font(400, 25, 31, 0.03);
+  }
+}
+
+.logo-label--black {
+  color: $colorPrimaryBlack;
+}
+.logo-label--white {
+  color: $colorLogo-white;
+}
+.header {
+  border-bottom: 1px solid $colorLogo-bg;
+}
+.header-container {
+  @extend %flex-align;
+  justify-content: flex-start;
+}

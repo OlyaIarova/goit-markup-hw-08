@@ -1,0 +1,78 @@
+.hero__button {
+  width: 200px;
+  height: 50px;
+  margin: 0;
+  color: $colorPrimary-white-btn;
+  background-color: $colorAccent;
+  border: 1px solid transparent;
+
+  @include font(700, 16, 30, 0.06);
+
+  border: 1px solid transparent;
+  &:hover,
+  &:focus {
+    color: $colorPrimary-text;
+    background-color: $colorPrimary-white-btn;
+  }
+
+  @include desktop {
+    width: 216px;
+  }
+}
+
+.button-set {
+  display: flex;
+  align-items: baseline;
+  flex-wrap: wrap;
+  padding-right: 100px;
+
+  @include tablet {
+    flex-wrap: nowrap;
+    justify-content: center;
+    padding-right: 0px;
+  }
+  @include desktop {
+  }
+}
+
+.button-set__item {
+  margin-right: 8px;
+  margin-bottom: 15px;
+  &:last-child {
+    margin-right: 0;
+  }
+}
+
+.button-set__button {
+  font-family: inherit;
+  @include font(500, 16, 26, 0.03);
+
+  padding: 6px 22px;
+  border: 1px solid transparent;
+  border-width: 0;
+  font-family: Roboto, sans-serif;
+  color: $colorPrimary-text;
+  background-color: $colorTitle-bg;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color $duration $timingFunction,
+    color $duration $timingFunction, box-shadow $duration $timingFunction;
+
+  &:hover,
+  &:focus {
+    color: $colorPrimary-white-btn;
+    background-color: $colorAccent;
+    box-shadow: $shadowButtonSet;
+  }
+}
+.button-set__button--prim {
+  color: $colorPrimary-white-btn;
+  background-color: $colorAccent;
+  box-shadow: $shadowButtonSet;
+  &:hover,
+  &:focus {
+    color: $colorPrimary-text;
+    background-color: $colorTitle-bg;
+    box-shadow: none;
+  }
+}
