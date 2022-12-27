@@ -15,8 +15,6 @@
   display: flex;
   flex-wrap: wrap;
   flex-basis: 100%;
-  margin-right: -30px;
-  margin-bottom: -30px;
 }
 
 .clients__item {
@@ -25,15 +23,24 @@
   padding: auto;
   margin-right: 30px;
   margin-bottom: 30px;
+  @include tel-max{
+  &:nth-child(2n) {
+    margin-right: 0px;
+  }}
+
 
   @include tablet {
     width: calc((100% - 120px) / 3);
+  @include tablet-max{
+    &:nth-child(3n) {
+      margin-right: 0px;
+    }
   }
 
   @include desktop {
     width: calc((100% - 180px) / 6);
   }
-}
+}}
 
 .clients__link {
   width: 100%;
@@ -42,7 +49,8 @@
   justify-content: center;
   border: 1px solid $colorIcon;
   border-radius: 4px;
-  transition: border $duration $timingFunction, fill $duration $timingFunction;
+  transition: border $duration $timingFunction, 
+  fill $duration $timingFunction;
 
   &:hover,
   &:focus {
@@ -50,8 +58,7 @@
     border-color: $colorAccent;
   }
 
-  & {
+  &{
     fill: currentColor;
     fill: $colorIcon;
-  }
-}
+  }}

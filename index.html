@@ -20,6 +20,12 @@
   <div class="container header__container">
     <nav class="header-nav">
       <a href="./index.html" class="logo-label">Web<span class="logo-label--black">Studio</span></a>
+      <button type="button" class="menu-open js-open-menu" aria-expanded="false" aria-controls="mobile-menu">
+        <svg class="menu-open__icon" width="40" height="40">
+          <use href="./images/icons.svg#icon-menu_24px" width="24" height="16">
+          </use>
+        </svg>
+      </button>
       <ul class="header-nav__list">
         <li class="header-nav__item"><a href="./index.html"
             class="header-nav__menu header-nav__menu--current ">Студія</a></li>
@@ -43,16 +49,9 @@
           </svg>+38 096 111 11 11</a>
       </li>
     </ul>
-    <button type="button" class="menu-open js-open-menu" aria-expanded="false" aria-controls="mobile-menu">
-      <svg class="menu-open__icon" width="40" height="40">
-        <use href="./images/icons.svg#icon-menu_24px" width="24" height="16">
-        </use>
-      </svg>
-    </button>
   </div>
   <!--menu-mobile-->
   <div class="mobile-menu js-menu-container" id="mobile-menu">
-    <div>
       <div class="menu-content">
         <div>
           <button type="button" class="menu-close js-close-menu">
@@ -101,13 +100,12 @@
           </ul>
         </div>
       </div>
-    </div>
   </div>
 </header>
 <main>
   <!-- hero-->
   <section class="hero">
-    <div class="container">
+    <div class="container hero-container">
       <h1 class="hero__title">ЕФЕКТИВНІ РІШЕННЯ ДЛЯ ВАШОГО БІЗНЕСУ</h1>
       <button type="button" class="button primary hero__button" data-modal-open>Замовити послугу</button>
     </div>
@@ -546,7 +544,7 @@
             <use href="./images/icons.svg#icon-email-black"></use>
           </svg>
         </label>
-        <label class="modal-form__field">
+        <label class="modal-form__field modal-form__field--comment ">
           <span class="modal-form__label">Коментар</span>
           <textarea name="comment" cols="30" rows="10" class="modal-form__label modal-form__label--comment"
             placeholder="Введіть текст"></textarea>

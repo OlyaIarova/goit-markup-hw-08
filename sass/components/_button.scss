@@ -24,7 +24,9 @@
   display: flex;
   align-items: baseline;
   flex-wrap: wrap;
-  padding-right: 100px;
+  @include tel-max{
+    padding-right: 100px;
+  }
 
   @include tablet {
     flex-wrap: nowrap;

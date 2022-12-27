@@ -3,7 +3,7 @@
   padding-top: 60px;
   padding-bottom: 60px;
   background: $colorBackground-footer;
-
+  
   @include desktop {
     display: flex;
     justify-content: center;
@@ -13,19 +13,37 @@
   }
 }
 .footer__container {
+  width: 100vw;
+
+  @include tablet-max{ 
+  padding-right: 0;
+padding-left: 0;
+  }
   @include desktop {
     display: flex;
+    justify-content: center;
+    box-direction: normal;
   }
 }
 .footer__box {
-  @include desktop {
-    margin-right: 70px;
+  padding-left: 0px;
+
+  @include tablet {
+    padding-left: 76px;
+    box-direction: normal;
+  }
+  @include desktop { 
+
+  padding-left: auto;
+
+    
   }
 }
 
 .footer__tablet {
   @include tablet {
     display: flex;
+    justify-content: center;
   }
   @include desktop {
     margin: 0px;
@@ -80,9 +98,11 @@
   display: flex;
   flex-direction: column;
   padding-top: 60px;
+  // width: ;
 
   @include tablet {
     padding-top: 65px;
+    // padding: 65px auto;
   }
   @include desktop {
     display: flex;
@@ -148,6 +168,12 @@
 .footer__form {
   padding-top: 60px;
   margin: 0px auto;
+  width: 420px;
+  @include tablet{
+    width: 450px;
+    padding-left: 0px;
+    padding-right: 0px;
+  }
 
   @include desktop {
     min-width: 570px;
@@ -167,10 +193,13 @@
 
 .submit-form__field {
   display: flex;
-  max-width: 450px;
+  // flex-basis: 100%;
   width: 100%;
-  padding: 15px 16px;
-  margin: 0px auto;
+  padding-left: 15px;
+  padding-top: 16px;
+  padding-bottom: 16px;
+  margin: 0px;
+  padding-right: 0px;
 
   background-color: $colorBackground-footer;
   border: 1px solid $colorFooter-input;
@@ -185,6 +214,7 @@
   &:hover,
   &:focus {
     border: 1px solid $colorAccent;
+
   }
   @include desktop {
     justify-content: center;
@@ -211,7 +241,6 @@
   @include desktop {
     justify-content: center;
     align-items: center;
-    width: 358px;
     margin: 0px auto;
   }
 }
