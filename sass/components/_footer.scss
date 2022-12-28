@@ -5,7 +5,7 @@
   padding-top: 60px;
   padding-bottom: 60px;
   background: $colorBackground-footer;
-  
+
   @include desktop {
     display: flex;
     justify-content: center;
@@ -17,9 +17,9 @@
 .footer__container {
   width: 100vw;
 
-  @include tablet-max{ 
-  padding-right: 0;
-padding-left: 0;
+  @include tablet-max {
+    padding-right: 0;
+    padding-left: 0;
   }
   @include desktop {
     display: flex;
@@ -36,10 +36,8 @@ padding-left: 0;
     flex-direction: column;
     margin-right: 165px;
   }
-  @include desktop { 
-
-  margin-right: 70px;
-    
+  @include desktop {
+    margin-right: 70px;
   }
 }
 
@@ -80,7 +78,7 @@ padding-left: 0;
   &:focus {
     color: $colorAccent;
   }
-} 
+}
 
 .footer__text {
   margin-bottom: 8px;
@@ -102,9 +100,9 @@ padding-left: 0;
   display: flex;
   flex-direction: column;
   width: 240px;
-@include tel-max{
-  padding-top: 60px;
-}
+  @include tel-max {
+    padding-top: 60px;
+  }
   @include tablet {
     padding-top: 5px;
     margin: 0px;
@@ -164,7 +162,7 @@ padding-left: 0;
   padding-top: 60px;
   margin: 0px auto;
   // width: 420px;
-  @include tablet{
+  @include tablet {
     width: 450px;
     padding-left: 0px;
     padding-right: 0px;
@@ -188,8 +186,8 @@ padding-left: 0;
 
 .submit-form__field {
   display: flex;
-  // flex-basis: 100%;
-  width: 450px;
+  width: 100%;
+  // width: 450px;
   padding: 15px 16px;
   margin: 0px;
   padding-right: 0px;
@@ -207,7 +205,6 @@ padding-left: 0;
   &:hover,
   &:focus {
     border: 1px solid $colorAccent;
-
   }
   @include desktop {
     justify-content: center;

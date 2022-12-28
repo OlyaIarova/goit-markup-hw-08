@@ -534,11 +534,6 @@ address {
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
 }
-@media screen and (max-width: 767px) {
-  .button-set {
-    padding-right: 100px;
-  }
-}
 @media screen and (min-width: 768px) {
   .button-set {
     -ms-flex-wrap: nowrap;
@@ -1411,7 +1406,7 @@ address {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  width: 450px;
+  width: 100%;
   padding: 15px 16px;
   margin: 0px;
   padding-right: 0px;
