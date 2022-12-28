@@ -1,5 +1,7 @@
 .footer {
   text-align: center;
+  align-content: normal;
+
   padding-top: 60px;
   padding-bottom: 60px;
   background: $colorBackground-footer;
@@ -29,13 +31,14 @@ padding-left: 0;
   padding-left: 0px;
 
   @include tablet {
-    padding-left: 76px;
+    width: max-content;
     box-direction: normal;
+    flex-direction: column;
+    margin-right: 165px;
   }
   @include desktop { 
 
-  padding-left: auto;
-
+  margin-right: 70px;
     
   }
 }
@@ -54,6 +57,7 @@ padding-left: 0;
 .logo-label__footer {
   @include tablet {
     padding-left: 90px;
+    padding-top: 0px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -76,7 +80,7 @@ padding-left: 0;
   &:focus {
     color: $colorAccent;
   }
-}
+} 
 
 .footer__text {
   margin-bottom: 8px;
@@ -97,17 +101,17 @@ padding-left: 0;
 .footer__social {
   display: flex;
   flex-direction: column;
+  width: 240px;
+@include tel-max{
   padding-top: 60px;
-  // width: ;
-
+}
   @include tablet {
-    padding-top: 65px;
-    // padding: 65px auto;
+    padding-top: 5px;
+    margin: 0px;
   }
   @include desktop {
     display: flex;
     flex-direction: column;
-    padding-top: 72px;
     width: 206px;
     padding-left: 0px;
     padding-right: 0px;
@@ -121,15 +125,6 @@ padding-left: 0;
   @include font(700, 14, 16, 0.03);
   @include desktop {
     text-align: start;
-  }
-}
-
-.footer__form {
-  @include desktop {
-    display: flex;
-    flex-direction: column;
-    max-width: 570px;
-    margin: 0px;
   }
 }
 
@@ -168,7 +163,7 @@ padding-left: 0;
 .footer__form {
   padding-top: 60px;
   margin: 0px auto;
-  width: 420px;
+  // width: 420px;
   @include tablet{
     width: 450px;
     padding-left: 0px;
@@ -177,10 +172,10 @@ padding-left: 0;
 
   @include desktop {
     min-width: 570px;
-    padding-top: 72px;
-    padding-bottom: 94px;
+    // padding-bottom: 94px;
+    padding-top: 0px;
     padding-left: 0px;
-    margin: 0px auto 0px 0px;
+    margin: 0px;
   }
 }
 .submit-form {
@@ -194,10 +189,8 @@ padding-left: 0;
 .submit-form__field {
   display: flex;
   // flex-basis: 100%;
-  width: 100%;
-  padding-left: 15px;
-  padding-top: 16px;
-  padding-bottom: 16px;
+  width: 450px;
+  padding: 15px 16px;
   margin: 0px;
   padding-right: 0px;
 

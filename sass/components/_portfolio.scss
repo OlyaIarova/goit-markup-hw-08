@@ -1,6 +1,7 @@
 .button-set {
   margin-bottom: 40px;
   border-radius: 4px;
+
   @include tablet {
     margin-bottom: 30px; 
   }
@@ -13,17 +14,20 @@
   display: flex;
   flex-wrap: wrap;
   
-  flex-basis: 100%;
+  // flex-basis: 100%;
+  // justify-content: center;
   transition: box-shadow $duration $timingFunction;
   margin-bottom: -30px;
+  margin-right: -30px;
 }
 
 .portfolio__item {
- 
+  display: flex;
   margin-bottom: $marginPrimary;
 
   @include tablet {
     width: calc((100% - 60px) / 2);
+
 
     &:not(:last-child) {
       margin-right: 30px;
@@ -59,6 +63,7 @@
 .portfolio__link:focus {
   box-shadow: $shadowButtonSet;
 }
+
 
 /*--------------------overflow-portfolio---------------------*/
 

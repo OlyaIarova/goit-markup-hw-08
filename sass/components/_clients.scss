@@ -14,11 +14,13 @@
 .clients__list {
   display: flex;
   flex-wrap: wrap;
+  justify-content: center;
   flex-basis: 100%;
+  margin-bottom: -30px;
 }
 
 .clients__item {
-  width: calc((100% - 60px) / 2);
+  width: calc((100% - 30px) / 2);
   height: 92px;
   padding: auto;
   margin-right: 30px;
@@ -30,7 +32,7 @@
 
 
   @include tablet {
-    width: calc((100% - 120px) / 3);
+    width: calc((100% - 90px) / 3);
   @include tablet-max{
     &:nth-child(3n) {
       margin-right: 0px;
@@ -38,8 +40,11 @@
   }
 
   @include desktop {
-    width: calc((100% - 180px) / 6);
+    width: calc((100% - 150px) / 6);
   }
+  &:nth-child(6n) {
+    margin-right: 0px;}
+
 }}
 
 .clients__link {

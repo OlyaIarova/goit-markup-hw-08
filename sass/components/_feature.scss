@@ -21,29 +21,38 @@
   flex-basis: 100%;
   margin-top: 0px;
   align-items: flex-start;
+  margin-bottom:-30px;
 }
 
 .features__item {
   margin-top: 0px;
-
-  margin-bottom: 30px;
+  &:not(:last-child) {
+    margin-bottom: 30px;
+  }
+  // margin-bottom: 30px;
 
   @include tel {
     .features .container {
       width: 360px;
     }
   }
-  @include tablet {
-    width: calc((100% - 60px) / 2);
-    &:not(:last-child) {
+  @include tablet{
+    // width: 354px;
+    width: calc((100% - 30px) / 2);
+    &:not(:nth-child(2n)) {
       margin-right: 30px;
     }
+    margin-bottom: 30px;
+    // &:nth-last-child(-n + 2) {
+    //   margin-bottom: 0px;
+    // }
   }
 
   @include desktop {
-    width: calc((100% - 90px) / 4);
-    margin-bottom: 0px;
-    padding-bottom: 0px;
+    width: calc((100% - 90px) / 4);   
+margin-bottom: 0px;
+    &:not(:last-child) {
+    margin-right: 30px;}
   }
 }
 
@@ -52,7 +61,7 @@
   color: $colorPrimary-text;
   @include font(400, 14, 16, 0.03);
 
-  @media screen and (max-width: 480px) {
+  @include tel-max{
     text-align: center;
   }
 }
